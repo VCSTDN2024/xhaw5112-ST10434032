@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 60px; /* Account for fixed navbar */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Background color */
+    padding: 10px 20px; /* Padding */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+.logo h1 {
+    color: #fff; /* Logo text color */
+    margin: 0; /* No margin */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+.nav-main-menu {
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal alignment */
+}
+
+.nav-main-menu li {
+    position: relative;
+}
+
+.nav-link {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Removes underline */
+    padding: 10px 15px; /* Spacing around links */
+    display: block;
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff; /* White background for dropdown */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dropdown-content li a {
+    color: #000; /* Dropdown link color */
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none; /* Removes underline */
+}
+
+.dropdown-content li a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Hover background */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the dropdown on hover */
+}
+
+.contact-form {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.info-card input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.info-card input:focus {
+    border-color: #28A745;
+    outline: none;
+}
+
+.contact-image {
+    max-width: 50%;
+    display: block;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.btn-submit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+    }
+
+    .contact-image {
+        max-width: 100%;
+    }
+
+    .nav-main-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}

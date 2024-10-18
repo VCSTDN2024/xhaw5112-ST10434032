@@ -1,0 +1,221 @@
+body {
+    background-image: url('Untitled.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cae6ff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #000000;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-main-menu li {
+    position: relative;
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #CFE9FF;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li a {
+    color: #000000;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav .btn {
+    background-color: #00cee9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.nav .btn:hover {
+    background-color: #CFE9FF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.register-section {
+    padding: 20px;
+    margin: 80px auto 0;
+    max-width: 800px;
+    background: #CFE9FF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.course-selection {
+    margin: 20px 0;
+}
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.course input {
+    margin-right: 10px;
+}
+
+.course label {
+    flex: 1;
+}
+
+.course .price {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #54afff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-main-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-main-menu.active {
+        display: flex;
+    }
+
+    .register-section {
+        padding: 15px;
+        margin: 60px auto 0;
+        max-width: 100%;
+    }
+
+    .input-group input {
+        padding: 8px;
+    }
+}
+/* Add this to your existing style.css */
+
+#calculate-btn {
+    background: linear-gradient(135deg, #00cee9, #007bff);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#calculate-btn:hover {
+    background: linear-gradient(135deg, #007bff, #00cee9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,167 @@
+/* General styling for body and nav */
+body {
+    background-image: url('pastelwallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8); /* Background color */
+    padding: 10px 20px; /* Padding */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+.logo h1 {
+    color: #fff; /* Logo text color */
+    margin: 0; /* No margin */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+.nav-main-menu {
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal alignment */
+}
+
+.nav-main-menu li {
+    position: relative;
+}
+
+.nav-link {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Removes underline */
+    padding: 10px 15px; /* Spacing around links */
+    display: block;
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff; /* White background for dropdown */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dropdown-content li a {
+    color: #000; /* Dropdown link color */
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none; /* Removes underline */
+}
+
+.dropdown-content li a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Hover background */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Shows the dropdown on hover */
+}
+
+.nav .btn {
+    background-color: #28A745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav .btn:hover {
+    background-color: #218838;
+}
+
+/* Form container styles */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #28A745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .nav-main-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

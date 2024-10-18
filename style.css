@@ -1,0 +1,242 @@
+body {
+    background-image: url('Untitled.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    
+    font-family: Arial, sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cae6ff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #000000;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-main-menu li {
+    position: relative;
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #CFE9FF;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li a {
+    color: #000000;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav .btn {
+    background-color: #00cee9;
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+.nav .btn:hover {
+    background-color: #CFE9FF; 
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    flex-grow: 1; 
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-text h3 {
+    font-size: 1.5em;
+}
+
+.hero-image {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    flex-grow: 1; 
+}
+
+.info-card {
+    background: #CFE9FF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    position: re;
+}
+
+.info-card h4 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.info-card p {
+    font-size: 1em;
+}
+
+.info-card .btn {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.info-card .btn:hover {
+    background: #0056b3;
+}
+
+.about-us {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #CFE9FF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.get-app {
+    text-align: center;
+}
+
+footer {
+    background-color: #54afff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; 
+}
+
+@media (max-width: 768px) {
+    .nav-main-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav-main-menu.active {
+        display: flex;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        max-width: 100%;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
